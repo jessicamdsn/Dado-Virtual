@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #ebe9eb;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 1rem; /* espacamento interno */
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-bottom: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#numero-de-dados{
+    height: 40px;
+    width: 50px;
+    margin-top: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border-color: black;
+}
+
+.centro {
+    margin-top: 0.625rem;
+    text-align: center;
+}
+
+img {
+    width: 200px;
+}
+
+#btnSortear {
+    padding: 10px;
+    font-size: 20px;
+    border: 0;
+    border-radius: 5px;
+    background: #7f3ab7;
+    color: #fff;
+    cursor: pointer;
+}
+
+#btnSortear:hover {
+    box-shadow: 1px 1px 5px rgb(143, 33, 177);
+}
+
+#sorteado {
+    background: #8625b3;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+/* Animar o dado */
+@keyframes mover {
+    0% {
+        transform: translateY(0px); /* mover no eixo Y vertical */
+        transform: rotate(45deg);   /* rotacionar 90 graus */
+        opacity: 0; /* opacidade 0 = 100% transparente */
+       }
+    50% {
+        transform:scale(50%); /* mudar tamanho para 50% */
+    }
+    100% {
+        transform: translateY(-15px);  /* mover no eixo Y vertical */
+        transform: rotate(-45deg);     /* rotacionar -90 graus */
+        opacity: 1; /* opacidade 1 = 0% transparente */
+    }
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 0; /* opacidade 0 = 100% transparente */
+    }
+    from {
+        opacity: 1; /* opacidade 1 = 0% transparente */
+    }
+}
+
+
+.animar {
+    animation: mover 0.5s infinite alternate;
+    /*
+    animation: mover .5s infinite alternate;
+    animation: mover .5s linear infinite;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+
+.aparecer {
+    animation: aparecer 1.5s ease-in;
+}
