@@ -1,0 +1,40 @@
+@media (max-width: 770px){
+
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#sorteados{
+    gap: 98px;
+}
+#numero-de-dados{
+    height: 37px;
+    width: 45px;
+    font-size: 18px;
+}
+#selectPart{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#figure{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#figure img{
+    width: 120px;
+}
+#sorteados{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+}

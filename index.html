@@ -8,25 +8,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 16 de JS</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsivo.css" />
 </head>
 
 <body>
     <main id='tela-principal'>
         <h1>Dado Virtual D6 | </h1>
+        <br>
         <section class='conteudo'>
-            <div id="sorteados">
-            <p id='sorteado' class='centro'>?</p>
-        </div>
-            <figure id="figure">
-                <img src="image/0.png" alt="Dado" id='imgDado' />
-            </figure>
-
-            <select name="quant" id="numero-de-dados">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>
-        </section>
+                <div id="sorteados">
+                    <p id='sorteado1' class='centro'>?</p>
+                    <p id='sorteado2' class='centro' style="display: none;">?</p>
+                    <p id='sorteado3' class='centro' style="display: none;">?</p>
+                </div>
+                <figure id="figure">
+                    <img src="image/0.png" alt="Dado" id='imgDado1' />
+                    <img src="image/0.png" alt="Dado" id='imgDado2' style="display: none;" />
+                    <img src="image/0.png" alt="Dado" id='imgDado3' style="display: none;" />
+                </figure>
+            </section>
+            <div id="selectPart">
+                <h3>Quantidade de dados: </h3>
+                <select class="quant" id="numero-de-dados">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+        
         <p class='centro'>
             <button id='btnSortear'>Sortear</button>
         </p>
